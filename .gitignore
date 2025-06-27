@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+
+# Virtual environment
+.venv/
+venv/
+ENV/
+env/
+
+# Django SQLite database (if used)
+db.sqlite3
+db.sqlite3-journal
+
+# VS Code settings (if you use it)
+.vscode/
+
+# macOS and Windows system files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.*
+
+# Logs
+*.log
+
+# Migrations (if you want to ignore them — optional)
+# ** Uncomment below if you want to ignore migration files **
+# */migrations/*.py
+# !*/migrations/__init__.py

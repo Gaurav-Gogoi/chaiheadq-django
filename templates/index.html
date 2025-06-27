@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container text-center mt-5">
+    <h1 class="display-4">Welcome to ChaiHeadQ!</h1>
+    <p class="lead">A cozy place to share your thoughts, ideas, and tweets over a virtual cup of chai ☕</p>
+
+    <div class="mt-4">
+        <a href="{% url 'tweet_list' %}" class="btn btn-primary btn-lg">View Tweets</a>
+        {% if user.is_authenticated %}
+            <a href="{% url 'tweet_create' %}" class="btn btn-success btn-lg">Create New Tweet</a>
+        {% else %}
+            <a href="{% url 'login' %}" class="btn btn-warning btn-lg">Login to Tweet</a>
+            <a href="{% url 'register' %}" class="btn btn-outline-secondary btn-lg">Register</a>
+        {% endif %}
+    </div>
+
+    <div class="mt-5">
+        <img src="../media/photo/OIP.jpeg" alt="Chai Image" class="img-fluid rounded shadow" style="max-height: 300px ">
+    </div>
+</div>
+{% endblock %}
